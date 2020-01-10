@@ -5,10 +5,12 @@ import './App.css'
 function App() {
   let subscribers = [
     {
+      id: 1,
       name: "Shilpa",
       phone: "8888888888"
     },
     {
+      id: 2,
       name: "Srishti",
       phone: "9999999999"
     }
@@ -25,7 +27,7 @@ function App() {
         {
           subscribers.map(sub => {
             return (
-              <div className="grid-container">
+              <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
                 <button className="custom-btn delete-btn">Delete</button>
